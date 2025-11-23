@@ -1,0 +1,336 @@
+/* ------------------------------------------- */
+/* Modo Claro: Colores por defecto (en :root) */
+/* ------------------------------------------- */
+
+:root {
+    /* Fondos */
+    --background: #F5F5F5;
+    /* Texto */
+    --text-primary: #1A1A1A;
+    /* Acentos */
+    --accent: #D32F2F;
+    --accent-dark: #B71C1C;
+    --text-white: #FFFFFF;
+
+    /* Opcional: Transición suave para el cambio de modo */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ------------------------------------------- */
+/* Modo Oscuro: Sobrescribiendo variables */
+/* ------------------------------------------- */
+
+body.dark-mode {
+    /* Fondos: Cambia de #F5F5F5 a #1A1A1A */
+    --background: #1A1A1A;
+    /* Texto: Cambia de #1A1A1A a #FFFFFF */
+    --text-primary: #FFFFFF;
+
+    /* Nota: Los colores de acento (rojo) se mantienen iguales en ambos modos */
+}
+
+/* Formateo de paginas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    font-family: 'Space Mono', monospace;
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    text-align: center;
+    color: var(--text-primary);
+    cursor: default;
+    transition: all 0.3s ease-in-out;
+}
+
+h1:hover {
+    color: var(--accent);
+    text-shadow: 0 0 10px var(--accent);
+
+}
+
+h2,
+h3 {
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    color: var(--text-primary);
+    z-index: 12;
+}
+
+p {
+    position: relative;
+    color: var(--background);
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 12;
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #FFFFFF, #666);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+nav {
+    background-color: var(--background);
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+#dark-mode-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: 2rem;
+}
+
+.nav-links {
+    margin: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-links ul {
+    width: 60%;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.nav-links ul li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.nav-links ul li a:hover {
+    display: inline-block;
+    color: var(--accent);
+    transform: translate3d(0, -5px, 0);
+    text-shadow: 0 0 10px var(--accent);
+}
+
+#hero {
+    background-color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    /* height: 50vh; */
+    position: relative;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Usaremos 11 para que esté encima avatar*/
+    z-index: 11;
+    /* degradado al pseudoelemento */
+    background-image: linear-gradient(to right,
+            rgba(0, 0, 0, 0) 30%,
+            rgba(0, 0, 0, 1) 100%);
+}
+
+.hero-background {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)),
+        url('../images/bg-hero.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+
+.hero-content {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.avatar {
+    height: 62vh;
+    object-fit: cover;
+    margin-top: -2vh;
+    padding: 0;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 10;
+    /* animacion */
+    opacity: 0;
+    filter: blur(5px);
+    transform: scale(10) translateX(-30%);
+}
+
+.content-about {
+    max-width: 600px;
+    margin-left: -2rem;
+    color: var(--text-primary);
+}
+
+#about {
+    position: relative;
+    z-index: 20;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#about {
+    height: 100vh;
+}
+
+
+
+
+/* 
+ANIMACIONES
+*/
+.typing-container {
+    display: flex;
+    /* Para que el cursor quede al lado del texto */
+    align-items: center;
+}
+
+/* Estilo del cursor parpadeante */
+.cursor {
+    display: inline-block;
+    /* Asegura que se vea */
+    margin-left: 5px;
+    animation: blink 0.7s infinite step-end;
+    /* Animación de parpadeo */
+    color: #a9a9a9;
+    /* Color del cursor */
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+/* Keyframes para la animación del parpadeo del cursor */
+@keyframes blink {
+
+    from,
+    to {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* SLIDE IMG AVATAR */
+
+
+@keyframes slideInFromLeftBlur {
+    0% {
+        /* Estado inicial: Fuera de la pantalla a la izquierda, desenfocado */
+        transform: translateX(-100%);
+        /* Desplazado 100% a la izquierda (fuera del viewport) */
+        filter: blur(5px);
+        /* Desenfoque de 5px */
+        opacity: 0;
+        /* Invisible al inicio */
+    }
+
+    100% {
+        /* Estado final: En su posición original, sin desenfoque */
+        transform: translateX(0);
+        /* En su posición final */
+        filter: blur(0px);
+        /* Sin desenfoque */
+        opacity: 1;
+        /* Totalmente visible */
+    }
+}
+
+.slide-left-to-right {
+    animation-name: slideInFromLeftBlur;
+    animation-delay: 1.5s;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideRightToLeft {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.slide-right-to-left {
+    transform: translateX(200%);
+    animation-name: slideRightToLeft;
+    animation-delay: 1.5s;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
