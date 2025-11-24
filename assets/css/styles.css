@@ -34,9 +34,11 @@ body.dark-mode {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 body {
+    overflow-x: hidden;
     background-color: var(--background);
     font-family: 'Space Mono', monospace;
     color: var(--text-primary);
@@ -115,7 +117,7 @@ nav {
 .nav-links {
     margin: 1rem;
     position: sticky;
-    top: 0;
+    top: 10%;
     z-index: 100;
 }
 
