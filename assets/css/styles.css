@@ -63,7 +63,7 @@ h1 {
 }
 
 h1:hover {
-    color: var(--accent);
+    /* color: var(--accent); */
     text-shadow: 0 0 10px var(--accent);
 
 }
@@ -79,7 +79,7 @@ h3 {
 
 p {
     position: relative;
-    color: var(--background);
+    color: var(--text-primary);
     font-size: 1.2rem;
     font-weight: 600;
     z-index: 12;
@@ -211,10 +211,31 @@ nav {
 }
 
 #about {
+    margin-top: 100vh;
     position: relative;
     z-index: 20;
+    text-align: center;
+}
 
+#projects {
+    margin-top: 100vh;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+}
 
+#skills {
+    margin-top: 100vh;
+    position: relative;
+    z-index: 20;
+    text-align: center;
+}
+
+#contact {
+    margin-top: 100vh;
+    position: relative;
+    z-index: 20;
+    text-align: center;
 }
 
 
@@ -236,14 +257,9 @@ nav {
 
 
 
-
-
-
-
-#about {
-    height: 100vh;
-}
-
+/* 
+EFECTOS
+*/
 
 
 
@@ -310,8 +326,8 @@ ANIMACIONES
 
 .slide-left-to-right {
     animation-name: slideInFromLeftBlur;
-    animation-delay: 1.5s;
-    animation-duration: 3s;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
 }
@@ -331,8 +347,29 @@ ANIMACIONES
 .slide-right-to-left {
     transform: translateX(200%);
     animation-name: slideRightToLeft;
-    animation-delay: 1.5s;
-    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-duration: 1s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
+}
+
+/* 1. Definición de la Animación */
+/* ------------------------------------------- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Clase para animar los textos y aparezcan */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.7s ease-out forwards;
 }
