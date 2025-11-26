@@ -1,0 +1,26 @@
+.cards-section {
+    display: flex;
+    flex-direction: row;
+    /* todas en fila */
+    gap: 1.5rem;
+    padding: 4rem 1.5rem;
+    overflow-x: auto;
+    /* opcional si se salen del ancho */
+    justify-content: center;
+}
+
+/* estado inicial */
+.card {
+    border: 1px solid #ccc;
+
+    opacity: 0;
+    transform: translateY(40px);
+    /* suben desde abajo */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* estado animado */
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}

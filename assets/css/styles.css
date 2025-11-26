@@ -45,6 +45,8 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+
+
 #dark-mode-toggle {
     background-color: transparent;
     border: none;
@@ -211,28 +213,28 @@ nav {
 }
 
 #about {
-    margin-top: 100vh;
+    height: 100vh;
     position: relative;
     z-index: 20;
     text-align: center;
 }
 
 #projects {
-    margin-top: 100vh;
+    height: 100vh;
     position: relative;
     z-index: 20;
     text-align: center;
 }
 
 #skills {
-    margin-top: 100vh;
+    height: 100vh;
     position: relative;
     z-index: 20;
     text-align: center;
 }
 
 #contact {
-    margin-top: 100vh;
+    height: 100vh;
     position: relative;
     z-index: 20;
     text-align: center;
@@ -358,7 +360,7 @@ ANIMACIONES
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(40px);
     }
 
     to {
@@ -370,6 +372,6 @@ ANIMACIONES
 /* Clase para animar los textos y aparezcan */
 .fade-in-up {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(40px);
     animation: fadeInUp 1.7s ease-out forwards;
 }

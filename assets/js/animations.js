@@ -61,3 +61,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+const cards = document.querySelectorAll('.cards-section .card');
+
+const options = {
+    root: null,
+    threshold: 0.2,
+};
+
+const callback = (entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add('show');
+                }, index * 250); // delay entre cada card
+            });
+            observer.unobserve(entry.target);
+        }
+    });
+};
+
+const observer = new IntersectionObserver(callback, options);
+const section = document.querySelector('.cards-section');
+if (section) observer.observe(section);
+
