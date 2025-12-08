@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/test.css">
     <link rel="stylesheet" href="assets/css/imports.css">
+    <link rel="stylesheet" href="assets/css/projects-carousel.css">
 </head>
 
 <body>
@@ -21,25 +22,36 @@
     <header>
         <nav>
             <!-- Navigation links will go here -->
-            <div class="logo-container">
-                <div class="typing-container">
-                    <h1 id="typing-text"></h1>
-                    <span class="cursor">|</span>
-                </div>
+            <!-- <div class="logo-container">
+
                 <button id="dark-mode-toggle" class="dark-mode-toggle">
                     <i id="dark-mode-icon" class="fas fa-sun"></i>
                 </button>
-            </div>
+            </div> -->
 
-            <div class="nav-links">
+            <div class="nav-links" id="nav">
                 <ul>
                     <!-- <li><a href="#hero">Home</a></li> -->
                     <li><a href="#about">Sobre Mi</a></li>
                     <li><a href="#projects">Proyectos</a></li>
                     <li><a href="#skills">Habilidades</a></li>
                     <li><a href="#contact">Contacto</a></li>
+                    <li><button id="dark-mode-toggle" class="dark-mode-toggle">
+                            <i id="dark-mode-icon" class="fas fa-sun"></i>
+                        </button></li>
                 </ul>
             </div>
+            <!-- <div class="hidden-nav-links" style="display: none;">
+                <ul>
+                    <li><a href="#about">Sobre Mi</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li class="link-activo"><a href="#contact">Contacto</a></li>
+                    <li><button id="dark-mode-toggle" class="dark-mode-toggle">
+                            <i id="dark-mode-icon" class="fas fa-sun"></i>
+                        </button></li>
+                </ul>
+            </div> -->
         </nav>
     </header>
 
@@ -48,58 +60,328 @@
             <!-- Hero content -->
             <div class="hero-background">
                 <div class="hero-content">
-                    <img class="avatar slide-left-to-right" src="assets/images/Avatar-Web-Me.png"
-                        alt="Avatar del Programador con gafas">
+                    <div class="img-hero-container">
+                        <img class="avatar slide-left-to-right" src="assets/images/Avatar-Web-Me.png"
+                            alt="Avatar del Programador con gafas">
+                    </div>
                     <div class="content-about">
                         <!-- <h2 class="text-gradient slide-right-to-left">About Me</h2> -->
-                        <p class="text-gradient slide-right-to-left"><span style="font-size: 2rem;">H</span>ola!, soy
-                            un programador con
-                            experiencia en
-                            el desarrollo web. Me encanta
-                            crear
-                            soluciones innovadoras y eficientes para los usuarios finales.</p>
+
+                        <p class="text-gradient" style="font-size: 2rem;"><span style="font-size: 3rem;">H</span>ola
+                            Mundo!,
+                            soy</p>
+                        <div class="typing-container">
+                            <h1 id="typing-text" class="text-gradient-red"></h1>
+                            <span class="cursor">|</span>
+                        </div>
+                        <p class="text-gradient" style="font-size: 1.7rem;">Desarrollador web, Bilbao.</p>
+                        <div class="social-links">
+                            <a href="https://github.com/kevingedev" target="_blank"><i class="fab fa-linkedin"></i>
+                                LinkedIn</a>
+                            <a href="https://www.linkedin.com/in/kevinruizgutierrez/" target="_blank"><i
+                                    class="fab fa-github"></i> GitHub</a>
+                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=kevingerardoruiz.2001@gmail.com"
+                                target="_blank"><i class="fa-regular fa-envelope"></i>
+                                kevingerardoruiz.200@gmail.com</a>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about">
-            <!-- About Me content -->
-            <p class="animate-on-scroll"> Este soy yo, explicado en un parrafo </p>
+        <div class="main-sections">
+            <section id="about">
+                <!-- About Me content -->
+                <div class="content">
+
+                    <div class="title-section">
+                        <i class="fa-solid fa-user animate-on-scroll"></i>
+                        <h2 class=""> Sobre mi</h2>
+                    </div>
+                    <div class="about-content">
+                        <p style="font-weight: 500;">
+                            Soy un Desarrollador FullStack con <span class="text-gradient-red"
+                                style="font-weight: 600;">+3 años de experiencia</span>
+                            especializado en la modernización y desarrollo de sistemas robustos.
+                        </p>
+                        <br>
+                        <p style="font-weight: 500;">
+                            Mi expertise se centra en el backend con <span class="text-gradient-red"
+                                style="font-weight: 600;">PHP (nativo y
+                                Laravel)</span>,
+                            donde he liderado la migración de plataformas legadas hacia arquitecturas más escalables.
+                            Domino
+                            la gestión y optimización de datos con <span class="text-gradient-red"
+                                style="font-weight: 600;">MySQL y SQL
+                                Server</span>,
+                            enfocándome en la creación de funciones escalables y en la implementación de reportes de
+                            negocio clave.
+                        </p>
+                        <br>
+                        <p style="font-weight: 500;">
+                            Mi objetivo es transformar requerimientos de usuario en soluciones eficientes y de alto
+                            rendimiento.
+                        </p>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="title-section">
+                        <i class="fa-solid fa-briefcase animate-on-scroll"></i>
+                        <h2>Experiencia laboral</h2>
+                    </div>
+                    <div class="about-content">
+
+                        <p style="font-weight: 500;font-size: small;">Mayo 2021 – 2025 (4 años)</p><br>
+                        <p style="font-weight: 500;">
+                            <span style="font-weight: 600;">Desarrollador FullStack | ALL AMERICAN TRAVEL</span>
+                            <br>
+                            Lideré la evolución y mantenimiento del sistema principal, migrando la infraestructura de
+                            PHP
+                            nativo a Laravel para mejorar la escalabilidad. Implementé nuevas funcionalidades y reportes
+                            de
+                            ventas cruciales, manejando la persistencia de datos con MySQL y SQL Server.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- <section id="projects">
+                <div class="projects-carousel animate-on-scroll">
+                    <div class="carousel-track" id="carousel-track">
+
+                        <div class="project-card">
+                            <img class="project-image" src="assets/images/proyecto1.jpg" alt="Proyecto 1">
+                            <div class="project-content">
+                                <div class="project-title">Gestor de Tareas</div>
+                                <div class="project-desc">App web para gestionar tareas diarias, con autenticación y notificaciones en tiempo real.</div>
+                                <div class="project-links">
+                                    <a class="project-btn" href="https://github.com/kevingedev/todo-app" target="_blank">Repositorio</a>
+                                    <a class="project-btn" href="https://todo.kevingedev.com" target="_blank">Ver Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <img class="project-image" src="assets/images/proyecto2.jpg" alt="Proyecto 2">
+                            <div class="project-content">
+                                <div class="project-title">E-commerce Laravel</div>
+                                <div class="project-desc">Tienda online con panel de administración, pasarela de pagos y catálogo dinámico.</div>
+                                <div class="project-links">
+                                    <a class="project-btn" href="https://github.com/kevingedev/ecommerce-laravel" target="_blank">Repositorio</a>
+                                    <a class="project-btn" href="https://shop.kevingedev.com" target="_blank">Ver Demo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <img class="project-image" src="assets/images/proyecto3.jpg" alt="Proyecto 3">
+                            <div class="project-content">
+                                <div class="project-title">API de Noticias</div>
+                                <div class="project-desc">API RESTful para consultar y filtrar noticias, implementada con Node.js y Express.</div>
+                                <div class="project-links">
+                                    <a class="project-btn" href="https://github.com/kevingedev/news-api" target="_blank">Repositorio</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card">
+                            <img class="project-image" src="assets/images/proyecto4.jpg" alt="Proyecto 4">
+                            <div class="project-content">
+                                <div class="project-title">Portafolio Personal</div>
+                                <div class="project-desc">Mi portafolio web, responsive y con modo oscuro, desarrollado en HTML, CSS y JS puro.</div>
+                                <div class="project-links">
+                                    <a class="project-btn" href="https://github.com/kevingedev/portafolio" target="_blank">Repositorio</a>
+                                    <a class="project-btn" href="https://kevingedev.com" target="_blank">Ver Página</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="carousel-prev" aria-label="Anterior">&#8592;</button>
+                        <button class="carousel-btn" id="carousel-next" aria-label="Siguiente">&#8594;</button>
+                    </div>
+                </div>
+            </section> -->
+
+            <section id="projects">
+  <h2 class="projects-title animate-on-scroll">Proyectos</h2>
+  
+  <div class="projects-container">
+    <div class="projects-carousel">
+      <!-- Proyecto 1 -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/bg-hero.png" alt="Proyecto 1">
+        </div>
+        <div class="project-content">
+          <h3>E-commerce Dashboard</h3>
+          <p>Panel administrativo completo para tiendas online con analíticas en tiempo real y gestión de inventario.</p>
+          <div class="project-actions">
+            <a href="#" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
+              <span>Repositorio</span>
+            </a>
+            <a href="#" target="_blank" class="btn-outline" aria-label="Ver demo en vivo">
+              <span>Demo</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 2 -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/bg-hero.png" alt="Proyecto 2">
+        </div>
+        <div class="project-content">
+          <h3>Weather App</h3>
+          <p>Aplicación meteorológica con pronósticos a 7 días, mapas interactivos y notificaciones push.</p>
+          <div class="project-actions">
+            <a href="#" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
+              <span>Repositorio</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 3 -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/bg-hero.png" alt="Proyecto 3">
+        </div>
+        <div class="project-content">
+          <h3>Task Manager</h3>
+          <p>Gestor de tareas colaborativo con drag & drop, sincronización en tiempo real y temas personalizables.</p>
+          <div class="project-actions">
+            <a href="#" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
+              <span>Repositorio</span>
+            </a>
+            <a href="#" target="_blank" class="btn-outline" aria-label="Ver demo en vivo">
+              <span>Demo</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Proyecto 4 -->
+      <article class="project-card">
+        <div class="project-image">
+          <img src="./assets/images/bg-hero.png" alt="Proyecto 4">
+        </div>
+        <div class="project-content">
+          <h3>Portfolio Website</h3>
+          <p>Plantilla de portfolio moderna y responsiva construida con HTML5, CSS3 y JavaScript vanilla.</p>
+          <div class="project-actions">
+            <a href="#" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
+              <span>Repositorio</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 
 
-        </section>
+            <section id="skills">
+                <!-- Skills content -->
+                <div class="content">
+                    <div class="title-section">
+                        <i class="fa-solid fa-cubes animate-on-scroll"></i>
+                        <h2>Habilidades</h2>
+                    </div>
+                    <!-- <p class="animate-on-scroll"> Aqui deben aparecer las habilidades</p> -->
 
-        <section id="projects">
-            <!-- Projects content -->
-            <p class="animate-on-scroll"> Aqui deben aparecer los proyectos</p>
-        </section>
+                    <section class="cards-section">
+                        <div class="skill-item card" title="SQL Server">
+                            <i class="devicon-microsoftsqlserver-plain colored"></i>
+                            <!-- <p>SQL Server</p> -->
+                        </div>
 
-        <section id="skills">
-            <!-- Skills content -->
-            <p class="animate-on-scroll"> Aqui deben aparecer las habilidades</p>
+                        <div class="card" title="MySQL">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <!--  <p>MySQL</p> -->
+                        </div>
 
-            <section class="cards-section">
-                <div class="card">Card 1</div>
-                <div class="card">Card 2</div>
-                <div class="card">Card 3</div>
-                <div class="card">Card 4</div>
-            </section>s
-        </section>
+                        <div class="card" title="PHP">
+                            <i class="devicon-php-plain colored"></i>
+                            <!-- <p>PHP Nativo</p> -->
+                        </div>
 
-        <section id="contact">
-            <!-- Contact content -->
-            <p class="animate-on-scroll"> Aqui deben aparecer los contactos</p>
-        </section>
+                        <div class="card" title="Laravel">
+                            <i class="devicon-laravel-plain colored"></i>
+                            <!-- <p>Laravel</p> -->
+                        </div>
+
+                        <div class="card" title="HTML5">
+                            <i class="devicon-html5-plain colored"></i>
+                            <!-- <p>HTML5</p> -->
+                        </div>
+
+                        <div class="card" title="CSS3">
+                            <i class="devicon-css3-plain colored"></i>
+                            <!-- <p>CSS3</p> -->
+                        </div>
+
+                        <div class="card" title="JavaScript">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <!-- <p>JavaScript</p> -->
+                        </div>
+
+                        <div class="card" title="C">
+                            <i class="devicon-c-plain colored"></i>
+                            <!-- <p>C</p> -->
+                        </div>
+
+                        <div class="card" title="C#">
+                            <i class="devicon-csharp-plain colored"></i>
+                            <!-- <p>C#</p> -->
+                        </div>
+
+                        <div class="card" title="jQuery">
+                            <i class="devicon-jquery-plain colored"></i>
+                            <!-- <p>jQuery</p> -->
+                        </div>
+
+                        <div class="card" title="Bootstrap">
+                            <i class="devicon-bootstrap-plain colored"></i>
+                            <!-- <p>Bootstrap</p> -->
+                        </div>
+
+                        <div class="card" title="Tailwind CSS">
+                            <i class="devicon-tailwindcss-plain colored"></i>
+                            <!-- <p>Tailwind CSS</p> -->
+                        </div>
+
+                        <div class="card" title="WordPress">
+                            <i class="devicon-wordpress-plain colored"></i>
+                            <!-- <p>WordPress</p> -->
+                        </div>
+                    </section>
+                </div>
+            </section>
+
+            <section id="contact">
+                <!-- Contact content -->
+                <p class="animate-on-scroll"> Aqui deben aparecer los contactos</p>
+            </section>
+        </div>
     </main>
 
     <footer>
         <!-- Footer content -->
     </footer>
 
+    <button id="btn-back-to-top" class="btn-back-to-top" title="Volver arriba">↑</button>
+
+
     <script src="assets/js/dark-mode.js"></script>
     <script src="assets/js/animations.js"></script>
+    <script src="assets/js/btn-scroll.js"></script>
+    <script src="assets/js/nav-scroll.js"></script>
+    <!-- <script src="assets/js/projects-carousel.js"></script> -->
 
 </body>
 

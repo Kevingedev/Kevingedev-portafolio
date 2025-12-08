@@ -74,7 +74,7 @@ const callback = (entries, observer) => {
             cards.forEach((card, index) => {
                 setTimeout(() => {
                     card.classList.add('show');
-                }, index * 250); // delay entre cada card
+                }, index * 100); // delay entre cada card
             });
             observer.unobserve(entry.target);
         }

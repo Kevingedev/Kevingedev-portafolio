@@ -1,22 +1,33 @@
+@import "styles.css";
+
 .cards-section {
     display: flex;
     flex-direction: row;
-    /* todas en fila */
+    flex-wrap: wrap;
     gap: 1.5rem;
     padding: 4rem 1.5rem;
-    overflow-x: auto;
+    /* overflow-x: auto; */
     /* opcional si se salen del ancho */
     justify-content: center;
 }
 
 /* estado inicial */
 .card {
-    border: 1px solid #ccc;
-
+    border: 1px solid var(--text-secondary);
+    border-radius: 0.5rem;
+    width: 20%;
+    text-align: center;
+    backdrop-filter: blur(80px);
+    font-size: 3rem;
     opacity: 0;
     transform: translateY(40px);
     /* suben desde abajo */
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 1s ease, transform 1s ease, box-shadow 0.5s ease;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--accent);
 }
 
 /* estado animado */
