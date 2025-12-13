@@ -21,13 +21,11 @@
 
     <header>
         <nav>
-            <!-- Navigation links will go here -->
-            <!-- <div class="logo-container">
-
-                <button id="dark-mode-toggle" class="dark-mode-toggle">
-                    <i id="dark-mode-icon" class="fas fa-sun"></i>
-                </button>
-            </div> -->
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
             <div class="nav-links" id="nav">
                 <ul>
@@ -67,20 +65,18 @@
                     <div class="content-about">
                         <!-- <h2 class="text-gradient slide-right-to-left">About Me</h2> -->
 
-                        <p class="text-gradient" style="font-size: 2rem;"><span style="font-size: 3rem;">H</span>ola
-                            Mundo!,
-                            soy</p>
+                        <p class="text-gradient hero-intro"><span class="hero-letter">H</span>ola Mundo!, soy</p>
                         <div class="typing-container">
                             <h1 id="typing-text" class="text-gradient-red"></h1>
                             <span class="cursor">|</span>
                         </div>
-                        <p class="text-gradient" style="font-size: 1.7rem;">Desarrollador web, Bilbao.</p>
+                        <p class="text-gradient hero-subtitle">Desarrollador web, Bilbao.</p>
                         <div class="social-links">
                             <a href="https://github.com/kevingedev" target="_blank"><i class="fab fa-linkedin"></i>
                                 LinkedIn</a>
                             <a href="https://www.linkedin.com/in/kevinruizgutierrez/" target="_blank"><i
                                     class="fab fa-github"></i> GitHub</a>
-                            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=kevingerardoruiz.2001@gmail.com"
+                            <a class="enlace-truncado" href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=kevingerardoruiz.2001@gmail.com"
                                 target="_blank"><i class="fa-regular fa-envelope"></i>
                                 kevingerardoruiz.200@gmail.com</a>
                         </div>
@@ -213,18 +209,18 @@
       <!-- Proyecto 1 -->
       <article class="project-card">
         <div class="project-image">
-          <img src="./assets/images/bg-hero.png" alt="Proyecto 1">
+          <img src="./assets/images/cv-analyzer.png" alt="Proyecto 1">
         </div>
         <div class="project-content">
-          <h3>E-commerce Dashboard</h3>
-          <p>Panel administrativo completo para tiendas online con analíticas en tiempo real y gestión de inventario.</p>
+          <h3>CV Analyzer</h3>
+          <p>Desarrollo de un Analizador Inteligente de Currículums para optimizar la selección de personal.</p>
           <div class="project-actions">
-            <a href="#" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
+            <a href="https://github.com/kevingedev/cv-analyzer" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
               <span>Repositorio</span>
             </a>
-            <a href="#" target="_blank" class="btn-outline" aria-label="Ver demo en vivo">
+            <!-- <a href="#" target="_blank" class="btn-outline" aria-label="Ver demo en vivo">
               <span>Demo</span>
-            </a>
+            </a> -->
           </div>
         </div>
       </article>
@@ -232,13 +228,13 @@
       <!-- Proyecto 2 -->
       <article class="project-card">
         <div class="project-image">
-          <img src="./assets/images/bg-hero.png" alt="Proyecto 2">
+          <img src="./assets/images/frog-game.jpg" alt="Proyecto 2">
         </div>
         <div class="project-content">
-          <h3>Weather App</h3>
-          <p>Aplicación meteorológica con pronósticos a 7 días, mapas interactivos y notificaciones push.</p>
+          <h3>Frog Game</h3>
+          <p>Frog Game es un juego de lógica móvil desarrollado para Android, implementado en Java y utilizando Android Studio.</p>
           <div class="project-actions">
-            <a href="#" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
+            <a href="https://github.com/kevingedev/frog-game" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
               <span>Repositorio</span>
             </a>
           </div>
@@ -248,17 +244,14 @@
       <!-- Proyecto 3 -->
       <article class="project-card">
         <div class="project-image">
-          <img src="./assets/images/bg-hero.png" alt="Proyecto 3">
+          <img src="./assets/images/gourmetonthego.png" alt="Proyecto 3">
         </div>
         <div class="project-content">
-          <h3>Task Manager</h3>
-          <p>Gestor de tareas colaborativo con drag & drop, sincronización en tiempo real y temas personalizables.</p>
+          <h3>Gourmet-on-the-Go</h3>
+          <p>Gourmet-on-the-Go es una tienda online moderna enfocada en la venta de alimentos precocinados.</p>
           <div class="project-actions">
-            <a href="#" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
+            <a href="https://github.com/kevingedev/gourmet-on-the-go" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
               <span>Repositorio</span>
-            </a>
-            <a href="#" target="_blank" class="btn-outline" aria-label="Ver demo en vivo">
-              <span>Demo</span>
             </a>
           </div>
         </div>
@@ -270,13 +263,13 @@
           <img src="./assets/images/bg-hero.png" alt="Proyecto 4">
         </div>
         <div class="project-content">
-          <h3>Portfolio Website</h3>
-          <p>Plantilla de portfolio moderna y responsiva construida con HTML5, CSS3 y JavaScript vanilla.</p>
+          <h3>Proximamente...</h3>
+          <!-- <p>Plantilla de portfolio moderna y responsiva construida con HTML5, CSS3 y JavaScript vanilla.</p>
           <div class="project-actions">
             <a href="#" target="_blank" class="btn-primary" aria-label="Repositorio GitHub">
               <span>Repositorio</span>
             </a>
-          </div>
+          </div> -->
         </div>
       </article>
     </div>
@@ -364,8 +357,103 @@
             </section>
 
             <section id="contact">
-                <!-- Contact content -->
-                <p class="animate-on-scroll"> Aqui deben aparecer los contactos</p>
+                <div class="content">
+                    <div class="title-section">
+                        <i class="fa-solid fa-envelope animate-on-scroll"></i>
+                        <h2>Contacto</h2>
+                    </div>
+                    
+                    <p class="contact-intro animate-on-scroll">
+                        ¿Tienes un proyecto en mente? Me encantaría escucharte. 
+                        Estoy disponible para colaborar en proyectos interesantes.
+                    </p>
+
+                    <div class="contact-container">
+                        <div class="contact-info">
+                            <div class="contact-item animate-on-scroll">
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Email</h3>
+                                    <a href="mailto:kevingerardoruiz.2001@gmail.com">kevingerardoruiz.2001@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item animate-on-scroll">
+                                <div class="contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>LinkedIn</h3>
+                                    <a href="https://www.linkedin.com/in/kevinruizgutierrez/" target="_blank">kevinruizgutierrez</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item animate-on-scroll">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>GitHub</h3>
+                                    <a href="https://github.com/kevingedev" target="_blank">kevingedev</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item animate-on-scroll">
+                                <div class="contact-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h3>Ubicación</h3>
+                                    <p>Bilbao, España</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form class="contact-form animate-on-scroll" id="contact-form" name="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success.html">
+                            <!-- Campo honeypot para protección contra spam (oculto) -->
+                            <input type="hidden" name="form-name" value="contact-form">
+                            <p class="hidden">
+                                <label>No llenar este campo si eres humano: <input name="bot-field" /></label>
+                            </p>
+
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" required placeholder="¿En qué puedo ayudarte?">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <span>Enviar Mensaje</span>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+
+                        <!-- Mensaje de éxito -->
+                        <div id="success-message" class="success-message" style="display: none;">
+                            <div class="success-content">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <h3>¡Mensaje enviado correctamente!</h3>
+                                <p>Gracias por contactarme. Te responderé lo antes posible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -381,6 +469,8 @@
     <script src="assets/js/animations.js"></script>
     <script src="assets/js/btn-scroll.js"></script>
     <script src="assets/js/nav-scroll.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/contact-form.js"></script>
     <!-- <script src="assets/js/projects-carousel.js"></script> -->
 
 </body>

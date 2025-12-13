@@ -333,9 +333,72 @@
   }
 }
 
+/* Fix para pantallas alrededor de 381px */
+@media (max-width: 400px) {
+  #projects {
+    padding: 2.5rem 0.75rem 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .projects-carousel {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+  
+  .project-card {
+    flex: 0 0 92%;
+    min-height: 340px;
+  }
+  
+  .project-content {
+    padding: 1.25rem;
+  }
+  
+  .projects-title {
+    padding: 0 0.5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .project-card {
     flex: 0 0 300px;
   }
+}
+
+/* ============================================ */
+/* LIGHT MODE STYLES FOR PROJECTS SECTION */
+/* ============================================ */
+
+body.light-mode .project-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .project-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 30px 60px rgba(211, 47, 47, 0.2);
+}
+
+body.light-mode .project-content h3 {
+  color: var(--text-primary);
+}
+
+body.light-mode .project-content p {
+  color: var(--text-secondary);
+}
+
+body.light-mode .btn-outline {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-primary);
+}
+
+body.light-mode .btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(211, 47, 47, 0.1);
+}
+
+body.light-mode .projects-title {
+  color: var(--text-primary);
 }
 
