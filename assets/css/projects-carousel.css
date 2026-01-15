@@ -244,8 +244,9 @@
 .project-content p {
   margin: 0;
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.5;
   flex: 1;
+  text-align: justify;
 }
 
 .project-actions {
